@@ -1,0 +1,1144 @@
+Command line: 
+executing config test use_gold_linker
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests && /Library/Developer/CommandLineTools/usr/bin/clang++ -pipe -stdlib=libc++ -fuse-ld=gold -o conftest-out conftest.cpp
+> clang: error: invalid linker name in argument '-fuse-ld=gold'
+test config.qtbase.tests.use_gold_linker FAILED
+executing config test verifyspec
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/verifyspec && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/verifyspec
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/verifyspec && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/verifyspec -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o verifyspec.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/verifyspec/verifyspec.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o verifyspec verifyspec.o      
+test config.qtbase.tests.verifyspec succeeded
+executing config test architecture
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/arch && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/arch
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/arch && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/arch -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o arch.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/arch/arch.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o arch arch.o      
+Detected architecture: x86_64 (cx16 mmx sse sse2 sse3 ssse3 sse4.1)
+test config.qtbase.tests.architecture gave result x86_64
+executing config test sse2
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=sse2 /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -msse2 -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_SSE2 -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.sse2 succeeded
+executing config test aesni
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=aesni /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -maes -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AESNI -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.aesni succeeded
+executing config test alloca_h
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/alloca_h && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/alloca_h
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/alloca_h && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o alloca_h main.o      
+test config.qtbase.tests.alloca_h succeeded
+executing config test sse3
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=sse3 /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -msse3 -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_SSE3 -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.sse3 succeeded
+executing config test ssse3
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=ssse3 /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mssse3 -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_SSSE3 -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+test config.qtbase.tests.ssse3 succeeded
+executing config test sse4_1
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=sse4_1 /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -msse4.1 -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_SSE4_1 -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.sse4_1 succeeded
+executing config test sse4_2
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=sse4_2 /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -msse4.2 -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_SSE4_2 -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.sse4_2 succeeded
+executing config test avx
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=avx /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mavx -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AVX -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+test config.qtbase.tests.avx succeeded
+executing config test avx2
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=avx2 /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mavx2 -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AVX2 -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.avx2 succeeded
+executing config test avx512f
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=avx512f /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mavx512f -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AVX512F -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+test config.qtbase.tests.avx512f succeeded
+executing config test avx512bw
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=avx512bw /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mavx512bw -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AVX512BW -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.avx512bw succeeded
+executing config test avx512cd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=avx512cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mavx512cd -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AVX512CD -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+test config.qtbase.tests.avx512cd succeeded
+executing config test avx512dq
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=avx512dq /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mavx512dq -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AVX512DQ -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.avx512dq succeeded
+executing config test avx512er
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=avx512er /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mavx512er -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AVX512ER -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.avx512er succeeded
+executing config test avx512ifma
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=avx512ifma /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mavx512ifma -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AVX512IFMA -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+test config.qtbase.tests.avx512ifma succeeded
+executing config test avx512pf
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=avx512pf /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mavx512pf -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AVX512PF -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.avx512pf succeeded
+executing config test avx512vbmi
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=avx512vbmi /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mavx512vbmi -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AVX512VBMI -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.avx512vbmi succeeded
+executing config test avx512vl
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=avx512vl /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mavx512vl -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_AVX512VL -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+test config.qtbase.tests.avx512vl succeeded
+executing config test c++14
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c++14 && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c++14
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c++14 && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -O2 -std=gnu++1y  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o c++14 main.o      
+test config.qtbase.tests.c++14 succeeded
+executing config test c++1z
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c++1z && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c++1z
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c++1z && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -O2 -std=gnu++1z  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:14:13: error: call to unavailable function 'get': introduced in macOS 10.14
+>     int i = std::get<int>(v);
+>             ^~~~~~~~~~~~~
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/variant:1376:16: note: candidate function [with _Tp = int, _Types = <int>] has been explicitly made unavailable
+> constexpr _Tp& get(variant<_Types...>& __v) {
+>                ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/variant:1393:22: note: candidate function [with _Tp = int, _Types = <int>] has been explicitly made unavailable
+> constexpr const _Tp& get(const variant<_Types...>& __v) {
+>                      ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/variant:1384:17: note: candidate function [with _Tp = int, _Types = <int>] not viable: no known conversion from 'std::variant<int>' to 'variant<int> &&' for 1st argument
+> constexpr _Tp&& get(variant<_Types...>&& __v) {
+>                 ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/variant:1401:23: note: candidate function [with _Tp = int, _Types = <int>] not viable: no known conversion from 'std::variant<int>' to 'const variant<int> &&' for 1st argument
+> constexpr const _Tp&& get(const variant<_Types...>&& __v) {
+>                       ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:802:17: note: candidate template ignored: could not match 'pair' against 'variant'
+> constexpr _T1 & get(pair<_T1, _T2>& __p) _NOEXCEPT
+>                 ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:809:23: note: candidate template ignored: could not match 'pair' against 'variant'
+> constexpr _T1 const & get(pair<_T1, _T2> const& __p) _NOEXCEPT
+>                       ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:816:18: note: candidate template ignored: could not match 'pair' against 'variant'
+> constexpr _T1 && get(pair<_T1, _T2>&& __p) _NOEXCEPT
+>                  ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:823:24: note: candidate template ignored: could not match 'pair' against 'variant'
+> constexpr _T1 const && get(pair<_T1, _T2> const&& __p) _NOEXCEPT
+>                        ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:830:17: note: candidate template ignored: could not match 'pair' against 'variant'
+> constexpr _T1 & get(pair<_T2, _T1>& __p) _NOEXCEPT
+>                 ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:837:23: note: candidate template ignored: could not match 'pair' against 'variant'
+> constexpr _T1 const & get(pair<_T2, _T1> const& __p) _NOEXCEPT
+>                       ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:844:18: note: candidate template ignored: could not match 'pair' against 'variant'
+> constexpr _T1 && get(pair<_T2, _T1>&& __p) _NOEXCEPT
+>                  ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:851:24: note: candidate template ignored: could not match 'pair' against 'variant'
+> constexpr _T1 const && get(pair<_T2, _T1> const&& __p) _NOEXCEPT
+>                        ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:1030:16: note: candidate template ignored: could not match 'tuple' against 'variant'
+> constexpr _T1& get(tuple<_Args...>& __tup) noexcept
+>                ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:1037:22: note: candidate template ignored: could not match 'tuple' against 'variant'
+> constexpr _T1 const& get(tuple<_Args...> const& __tup) noexcept
+>                      ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:1044:17: note: candidate template ignored: could not match 'tuple' against 'variant'
+> constexpr _T1&& get(tuple<_Args...>&& __tup) noexcept
+>                 ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:1051:23: note: candidate template ignored: could not match 'tuple' against 'variant'
+> constexpr _T1 const&& get(tuple<_Args...> const&& __tup) noexcept
+>                       ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:768:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(pair<_T1, _T2>& __p) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:776:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(const pair<_T1, _T2>& __p) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:785:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(pair<_T1, _T2>&& __p) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:793:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(const pair<_T1, _T2>&& __p) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:953:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(tuple<_Tp...>& __t) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:962:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(const tuple<_Tp...>& __t) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:971:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(tuple<_Tp...>&& __t) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:981:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(const tuple<_Tp...>&& __t) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/array:446:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(array<_Tp, _Size>& __a) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/array:455:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(const array<_Tp, _Size>& __a) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/array:466:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(array<_Tp, _Size>&& __a) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/array:475:1: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> get(const array<_Tp, _Size>&& __a) _NOEXCEPT
+> ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/variant:1336:59: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> constexpr variant_alternative_t<_Ip, variant<_Types...>>& get(
+>                                                           ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/variant:1346:60: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> constexpr variant_alternative_t<_Ip, variant<_Types...>>&& get(
+>                                                            ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/variant:1356:65: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> constexpr const variant_alternative_t<_Ip, variant<_Types...>>& get(
+>                                                                 ^
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/variant:1366:66: note: candidate template ignored: invalid explicitly-specified argument for template parameter '_Ip'
+> constexpr const variant_alternative_t<_Ip, variant<_Types...>>&& get(
+>                                                                  ^
+> main.cpp:15:5: error: call to unavailable function 'visit': introduced in macOS 10.14
+>     std::visit([](const auto &) { return 1; }, v);
+>     ^~~~~~~~~~
+> /Library/Developer/CommandLineTools/usr/include/c++/v1/variant:1524:26: note: candidate function [with _Visitor = (lambda at main.cpp:15:16), _Vs = <std::__1::variant<int> &>] has been explicitly made unavailable
+> constexpr decltype(auto) visit(_Visitor&& __visitor, _Vs&&... __vs) {
+>                          ^
+> 2 errors generated.
+> make: *** [main.o] Error 1
+test config.qtbase.tests.c++1z FAILED
+executing config test c99
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c99 && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c99
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c99 && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang -c -pipe -O2 -std=gnu99  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.c
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o c99 main.o      
+test config.qtbase.tests.c99 succeeded
+executing config test c11
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c11 && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c11
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/c11 && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang -c -pipe -O2 -std=gnu11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.c
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o c11 main.o      
+test config.qtbase.tests.c11 succeeded
+Global lib dirs: [] [/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib]
+Global inc dirs: [] [/Library/Developer/CommandLineTools/usr/include/c++/v1 /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include /Library/Developer/CommandLineTools/usr/include /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include]
+looking for library dbus
+Trying source 0 (type pkgConfig) of library dbus ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library dbus ...
+  => source failed condition 'config.win32'.
+Trying source 2 (type inline) of library dbus ...
+None of [libdbus-1.dylib libdbus-1.tbd libdbus-1.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase.libraries.dbus FAILED
+executing config test f16c
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=f16c /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mf16c -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_F16C -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.f16c succeeded
+looking for library host_dbus
+Trying source 0 (type pkgConfig) of library host_dbus ...
++ /usr/local/bin/pkg-config --exists --silence-errors dbus-1 '>=' 1.2
+pkg-config did not find package.
+  => source produced no result.
+Trying source 1 (type inline) of library host_dbus ...
+ => source accepted.
+test config.qtbase.libraries.host_dbus succeeded
+looking for library libudev
+Trying source 0 (type pkgConfig) of library libudev ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library libudev ...
+None of [libudev.dylib libudev.tbd libudev.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase.libraries.libudev FAILED
+executing config test posix_fallocate
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/posix_fallocate && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/posix_fallocate
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/posix_fallocate && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:8:12: error: use of undeclared identifier 'posix_fallocate'
+>     (void) posix_fallocate(0, 0, 0);
+>            ^
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtbase.tests.posix_fallocate FAILED
+executing config test precompile_header
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/precompile_header && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/precompile_header
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/precompile_header && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -pipe -stdlib=libc++ -O2 -std=gnu++11 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -x c++-header -c header.h -o .pch/precompile_header/c++_x86_64.pch
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -include.pch/precompile_header/c++_x86_64 -pipe -stdlib=libc++ -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o precompile_header main.o      
+test config.qtbase.tests.precompile_header succeeded
+executing config test rdrnd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=rdrnd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -mrdrnd -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_RDRND -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.rdrnd succeeded
+executing config test reduce_exports
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/reduce_exports && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/reduce_exports
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/reduce_exports && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -fvisibility=hidden -fvisibility-inlines-hidden -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> rm -f libreduce_exports.1.0.0.dylib libreduce_exports.dylib libreduce_exports.1.dylib libreduce_exports.1.0.dylib
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -single_module -dynamiclib -compatibility_version	1.0 -current_version	1.0.0 -install_name	libreduce_exports.1.dylib -o libreduce_exports.1.0.0.dylib main.o      
+> ln -s libreduce_exports.1.0.0.dylib libreduce_exports.dylib
+> ln -s libreduce_exports.1.0.0.dylib libreduce_exports.1.dylib
+> ln -s libreduce_exports.1.0.0.dylib libreduce_exports.1.0.dylib
+test config.qtbase.tests.reduce_exports succeeded
+executing config test reduce_relocations
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/reduce_relocations && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/reduce_relocations
+> Project ERROR: Nope
+test config.qtbase.tests.reduce_relocations FAILED
+executing config test shani
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" CONFIG+=add_cflags DEFINES+=NO_ATTRIBUTE SIMD=shani /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -msha -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DNO_ATTRIBUTE -DQT_COMPILER_SUPPORTS_SHANI -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.shani succeeded
+executing config test stl
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/stl && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/stl
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/stl && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/stl -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o stltest.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/stl/stltest.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o stl stltest.o      
+test config.qtbase.tests.stl succeeded
+looking for library zlib
+Trying source 0 (type inline) of library zlib ...
+  => source failed condition 'config.msvc'.
+Trying source 1 (type inline) of library zlib ...
+  => source failed condition 'config.msvc'.
+Trying source 2 (type inline) of library zlib ...
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/zlib && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += zlib' 'QMAKE_LIBS_ZLIB = /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib/libz.tbd' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/zlib
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/zlib && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o zlib main.o   /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib/libz.tbd   
+ => source accepted.
+test config.qtbase.libraries.zlib succeeded
+executing config test x86SimdAlways
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'SIMD=aesni avx avx2 avx512bw avx512cd avx512dq avx512er avx512f avx512ifma avx512pf avx512vbmi avx512vl f16c rdrnd shani sse2 sse3 sse4_1 sse4_2 ssse3' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/x86_simd && MAKEFLAGS= /usr/bin/make clean && MAKEFLAGS= /usr/bin/make
+> rm -f main.o
+> rm -f *~ core *.core
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -O2 -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DQT_COMPILER_SUPPORTS_AESNI -DQT_COMPILER_SUPPORTS_AVX -DQT_COMPILER_SUPPORTS_AVX2 -DQT_COMPILER_SUPPORTS_AVX512BW -DQT_COMPILER_SUPPORTS_AVX512CD -DQT_COMPILER_SUPPORTS_AVX512DQ -DQT_COMPILER_SUPPORTS_AVX512ER -DQT_COMPILER_SUPPORTS_AVX512F -DQT_COMPILER_SUPPORTS_AVX512IFMA -DQT_COMPILER_SUPPORTS_AVX512PF -DQT_COMPILER_SUPPORTS_AVX512VBMI -DQT_COMPILER_SUPPORTS_AVX512VL -DQT_COMPILER_SUPPORTS_F16C -DQT_COMPILER_SUPPORTS_RDRND -DQT_COMPILER_SUPPORTS_SHANI -DQT_COMPILER_SUPPORTS_SSE2 -DQT_COMPILER_SUPPORTS_SSE3 -DQT_COMPILER_SUPPORTS_SSE4_1 -DQT_COMPILER_SUPPORTS_SSE4_2 -DQT_COMPILER_SUPPORTS_SSSE3 -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/config.tests/x86_simd/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o x86_simd main.o      
+test config.qtbase.tests.x86SimdAlways succeeded
+looking for library librt
+Trying source 0 (type inline) of library librt ...
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/librt && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += librt' 'QMAKE_LIBS_LIBRT = ' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/librt
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/librt && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o librt main.o      
+ => source accepted.
+test config.qtbase_corelib.libraries.librt succeeded
+executing config test clock-monotonic
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/clock-monotonic && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += librt' 'QMAKE_LIBS_LIBRT = ' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/clock-monotonic
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/clock-monotonic && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:12:8: error: Feature _POSIX_MONOTONIC_CLOCK not available
+>     #  error Feature _POSIX_MONOTONIC_CLOCK not available
+>        ^
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtbase_corelib.tests.clock-monotonic FAILED
+executing config test cxx11_future
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cxx11_future && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cxx11_future
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cxx11_future && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o cxx11_future main.o   -lpthread   
+test config.qtbase_corelib.tests.cxx11_future succeeded
+looking for library libdl
+Trying source 0 (type inline) of library libdl ...
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/libdl && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += libdl' 'QMAKE_LIBS_LIBDL = ' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/libdl
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/libdl && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o libdl main.o      
+ => source accepted.
+test config.qtbase_corelib.libraries.libdl succeeded
+executing config test eventfd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/eventfd && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/eventfd
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/eventfd && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:2:10: fatal error: 'sys/eventfd.h' file not found
+> #include <sys/eventfd.h>
+>          ^~~~~~~~~~~~~~~
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtbase_corelib.tests.eventfd FAILED
+executing config test futimens
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/futimens && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/futimens
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/futimens && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -Werror=unguarded-availability -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:7:5: error: 'futimens' is only available on macOS 10.13 or newer [-Werror,-Wunguarded-availability-new]
+>     futimens(-1, 0);
+>     ^~~~~~~~
+> /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/sys/stat.h:373:9: note: 'futimens' has been marked as being introduced in macOS 10.13 here, but the deployment target is macOS 10.12.0
+> int     futimens(int __fd, const struct timespec __times[2]) __API_AVAILABLE(macosx(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+>         ^
+> main.cpp:7:5: note: enclose 'futimens' in a __builtin_available check to silence this warning
+>     futimens(-1, 0);
+>     ^~~~~~~~
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtbase_corelib.tests.futimens FAILED
+executing config test futimes
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/futimes && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/futimes
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/futimes && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o futimes main.o      
+test config.qtbase_corelib.tests.futimes succeeded
+executing config test getentropy
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/getentropy && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/getentropy
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/getentropy && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:8:12: error: use of undeclared identifier 'getentropy'
+>     (void) getentropy(buf, sizeof(buf));
+>            ^
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtbase_corelib.tests.getentropy FAILED
+looking for library glib
+Trying source 0 (type pkgConfig) of library glib ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtbase_corelib.libraries.glib FAILED
+looking for library icu
+Trying source 0 (type inline) of library icu ...
+  => source failed condition 'config.win32 && !features.shared'.
+Trying source 1 (type inline) of library icu ...
+  => source failed condition 'config.win32 && features.shared'.
+Trying source 2 (type inline) of library icu ...
+None of [libicui18n.dylib libicui18n.tbd libicui18n.a] found in [] and global paths.
+None of [libicuuc.dylib libicuuc.tbd libicuuc.a] found in [] and global paths.
+None of [libicudata.dylib libicudata.tbd libicudata.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_corelib.libraries.icu FAILED
+executing config test inotify
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/inotify && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/inotify
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/inotify && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:2:10: fatal error: 'sys/inotify.h' file not found
+> #include <sys/inotify.h>
+>          ^~~~~~~~~~~~~~~
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtbase_corelib.tests.inotify FAILED
+executing config test ipc_sysv
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/ipc_sysv && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/ipc_sysv
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/ipc_sysv && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o ipc_sysv main.o      
+test config.qtbase_corelib.tests.ipc_sysv succeeded
+executing config test ppoll
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/ppoll && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/ppoll
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/ppoll && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:9:21: error: variable has incomplete type 'struct timespec'
+>     struct timespec ts;
+>                     ^
+> main.cpp:9:12: note: forward declaration of 'timespec'
+>     struct timespec ts;
+>            ^
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtbase_corelib.tests.ppoll FAILED
+executing config test pollts
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/pollts && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/pollts
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/pollts && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:12:5: error: use of undeclared identifier 'pollts'
+>     pollts(&pfd, 1, &ts, &sig);
+>     ^
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtbase_corelib.tests.pollts FAILED
+executing config test poll
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/poll && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/poll
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/poll && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o poll main.o      
+test config.qtbase_corelib.tests.poll succeeded
+looking for library slog2
+Trying source 0 (type inline) of library slog2 ...
+None of [libslog2.dylib libslog2.tbd libslog2.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_corelib.libraries.slog2 FAILED
+looking for library libatomic
+Trying source 0 (type inline) of library libatomic ...
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/libatomic && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += libatomic' 'QMAKE_LIBS_LIBATOMIC = ' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/libatomic
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/libatomic && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o libatomic main.o      
+ => source accepted.
+test config.qtbase_corelib.libraries.libatomic succeeded
+looking for library doubleconversion
+Trying source 0 (type inline) of library doubleconversion ...
+None of [libdouble-conversion.dylib libdouble-conversion.tbd libdouble-conversion.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_corelib.libraries.doubleconversion FAILED
+looking for library pcre2
+Trying source 0 (type pkgConfig) of library pcre2 ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library pcre2 ...
+None of [libpcre2-16.dylib libpcre2-16.tbd libpcre2-16.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_corelib.libraries.pcre2 FAILED
+executing config test cloexec
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cloexec && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cloexec
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cloexec && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:12:12: error: use of undeclared identifier 'pipe2'
+>     (void) pipe2(pipes, O_CLOEXEC | O_NONBLOCK);
+>            ^
+> main.cpp:14:12: error: use of undeclared identifier 'dup3'
+>     (void) dup3(0, 3, O_CLOEXEC);
+>            ^
+> main.cpp:18:29: error: use of undeclared identifier 'SOCK_CLOEXEC'
+>     (void) accept4(0, 0, 0, SOCK_CLOEXEC | SOCK_NONBLOCK);
+>                             ^
+> main.cpp:18:44: error: use of undeclared identifier 'SOCK_NONBLOCK'
+>     (void) accept4(0, 0, 0, SOCK_CLOEXEC | SOCK_NONBLOCK);
+>                                            ^
+> 4 errors generated.
+> make: *** [main.o] Error 1
+test config.qtbase_corelib.tests.cloexec FAILED
+executing config test cxx11_random
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cxx11_random && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cxx11_random
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cxx11_random && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o cxx11_random main.o      
+test config.qtbase_corelib.tests.cxx11_random succeeded
+executing config test atomicfptr
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/atomicfptr && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/atomicfptr
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/atomicfptr && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o atomicfptr main.o      
+test config.qtbase_corelib.tests.atomicfptr succeeded
+looking for library corewlan
+Trying source 0 (type inline) of library corewlan ...
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/corewlan && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += corewlan' 'QMAKE_LIBS_COREWLAN = -framework CoreWLAN -framework Foundation' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/corewlan
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/corewlan && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.mm
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o corewlan main.o   -framework CoreWLAN -framework Foundation   
+ => source accepted.
+test config.qtbase_network.libraries.corewlan succeeded
+Trying source 0 (type makeSpec) of library network ...
+ => source accepted.
+executing config test getifaddrs
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/getifaddrs && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += network' 'QMAKE_LIBS_NETWORK = ' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/getifaddrs
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/getifaddrs && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o getifaddrs main.o      
+test config.qtbase_network.tests.getifaddrs succeeded
+executing config test ipv6ifname
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/ipv6ifname && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += network' 'QMAKE_LIBS_NETWORK = ' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/ipv6ifname
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/ipv6ifname && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o ipv6ifname main.o      
+test config.qtbase_network.tests.ipv6ifname succeeded
+looking for library opengl
+Trying source 0 (type pkgConfig) of library opengl ...
+  => source failed condition '!config.darwin'.
+Trying source 1 (type openglMakeSpec) of library opengl ...
+header entry 'config.qtbase_gui.libraries.opengl.headers.0' failed condition '!config.darwin'.
+header entry 'config.qtbase_gui.libraries.opengl.headers.0' failed condition '!config.darwin'.
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/opengl && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += opengl' 'QMAKE_LIBS_OPENGL = -framework OpenGL -framework AGL' 'QMAKE_INCDIR_OPENGL = /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers/' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/opengl
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/opengl && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o opengl main.o   -framework OpenGL -framework AGL   
+ => source accepted.
+test config.qtbase_gui.libraries.opengl succeeded
+looking for library drm
+Trying source 0 (type pkgConfig) of library drm ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library drm ...
+None of [libdrm.dylib libdrm.tbd libdrm.a] found in [] and global paths.
+  => source produced no result.
+Trying source 2 (type inline) of library drm ...
+  => source failed condition 'config.integrity'.
+test config.qtbase_gui.libraries.drm FAILED
+looking for library egl
+Trying source 0 (type pkgConfig) of library egl ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type makeSpec) of library egl ...
+EGL/egl.h not found in [] and global paths.
+  => source produced no result.
+test config.qtbase_gui.libraries.egl FAILED
+executing config test evdev
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/evdev && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/evdev
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/evdev && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:5:12: fatal error: 'linux/input.h' file not found
+> #  include <linux/input.h>
+>            ^~~~~~~~~~~~~~~
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtbase_gui.tests.evdev FAILED
+looking for library gbm
+Trying source 0 (type pkgConfig) of library gbm ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtbase_gui.libraries.gbm FAILED
+executing config test linuxfb
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/linuxfb && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/linuxfb
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/linuxfb && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:2:10: fatal error: 'linux/fb.h' file not found
+> #include <linux/fb.h>
+>          ^~~~~~~~~~~~
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtbase_gui.tests.linuxfb FAILED
+looking for library mtdev
+Trying source 0 (type pkgConfig) of library mtdev ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtbase_gui.libraries.mtdev FAILED
+looking for library openvg
+Trying source 0 (type pkgConfig) of library openvg ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type makeSpec) of library openvg ...
+VG/openvg.h not found in [] and global paths.
+  => source produced no result.
+test config.qtbase_gui.libraries.openvg FAILED
+executing config test qpa_default_platform
+test config.qtbase_gui.tests.qpa_default_platform gave result cocoa
+looking for library freetype
+Trying source 0 (type pkgConfig) of library freetype ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type freetype) of library freetype ...
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/freetype && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += freetype' 'QMAKE_LIBS_FREETYPE = -lfreetype' 'QMAKE_DEPENDS_FREETYPE_CC = ZLIB' 'QMAKE_DEPENDS_FREETYPE_LD = ZLIB' 'QMAKE_LIBS_ZLIB = /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib/libz.tbd' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/freetype
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/freetype && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> main.cpp:2:10: fatal error: 'ft2build.h' file not found
+> #include <ft2build.h>
+>          ^~~~~~~~~~~~
+> 1 error generated.
+> make: *** [main.o] Error 1
+ => source failed verification.
+Trying source 2 (type inline) of library freetype ...
+  => source failed condition 'config.wasm'.
+Trying source 3 (type inline) of library freetype ...
+None of [libfreetype.dylib libfreetype.tbd libfreetype.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_gui.libraries.freetype FAILED
+looking for library libjpeg
+Trying source 0 (type inline) of library libjpeg ...
+  => source failed condition 'config.msvc'.
+Trying source 1 (type inline) of library libjpeg ...
+None of [libjpeg.dylib libjpeg.tbd libjpeg.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_gui.libraries.libjpeg FAILED
+looking for library libpng
+Trying source 0 (type pkgConfig) of library libpng ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library libpng ...
+  => source failed condition 'config.msvc'.
+Trying source 2 (type inline) of library libpng ...
+  => source failed condition 'config.msvc'.
+Trying source 3 (type inline) of library libpng ...
+None of [libpng16.dylib libpng16.tbd libpng16.a] found in [] and global paths.
+  => source produced no result.
+Trying source 4 (type inline) of library libpng ...
+None of [libpng.dylib libpng.tbd libpng.a] found in [] and global paths.
+  => source produced no result.
+Trying source 5 (type inline) of library libpng ...
+  => source failed condition 'config.wasm'.
+test config.qtbase_gui.libraries.libpng FAILED
+looking for library tslib
+Trying source 0 (type inline) of library tslib ...
+None of [libts.dylib libts.tbd libts.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_gui.libraries.tslib FAILED
+looking for library vulkan
+Trying source 0 (type pkgConfig) of library vulkan ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type makeSpec) of library vulkan ...
+vulkan/vulkan.h not found in [] and global paths.
+  => source produced no result.
+test config.qtbase_gui.libraries.vulkan FAILED
+looking for library xkbcommon
+Trying source 0 (type pkgConfig) of library xkbcommon ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library xkbcommon ...
+None of [libxkbcommon.dylib libxkbcommon.tbd libxkbcommon.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_gui.libraries.xkbcommon FAILED
+looking for library cups
+Trying source 0 (type inline) of library cups ...
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cups && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += cups' 'QMAKE_LIBS_CUPS = /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib/libcups.tbd' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cups
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/cups && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o cups main.o   /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib/libcups.tbd   
+ => source accepted.
+test config.qtbase_printsupport.libraries.cups succeeded
+looking for library db2
+Trying source 0 (type inline) of library db2 ...
+  => source failed condition 'config.win32'.
+Trying source 1 (type inline) of library db2 ...
+None of [libdb2.dylib libdb2.tbd libdb2.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_sqldrivers.libraries.db2 FAILED
+looking for library ibase
+Trying source 0 (type inline) of library ibase ...
+  => source failed condition 'config.win32'.
+Trying source 1 (type inline) of library ibase ...
+None of [libgds.dylib libgds.tbd libgds.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_sqldrivers.libraries.ibase FAILED
+looking for library mysql
+Trying source 0 (type mysqlConfig) of library mysql ...
+mysql_config not found.
+  => source produced no result.
+Trying source 1 (type mysqlConfig) of library mysql ...
+mysql_config not found.
+  => source produced no result.
+Trying source 2 (type mysqlConfig) of library mysql ...
+mysql_config not found.
+  => source produced no result.
+Trying source 3 (type mysqlConfig) of library mysql ...
+mysql_config not found.
+  => source produced no result.
+Trying source 4 (type inline) of library mysql ...
+None of [libmysqlclient_r.dylib libmysqlclient_r.tbd libmysqlclient_r.a] found in [] and global paths.
+  => source produced no result.
+Trying source 5 (type inline) of library mysql ...
+  => source failed condition 'config.win32'.
+Trying source 6 (type inline) of library mysql ...
+None of [libmysqlclient.dylib libmysqlclient.tbd libmysqlclient.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_sqldrivers.libraries.mysql FAILED
+looking for library oci
+Trying source 0 (type inline) of library oci ...
+  => source failed condition 'config.win32'.
+Trying source 1 (type inline) of library oci ...
+None of [libclntsh.dylib libclntsh.tbd libclntsh.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_sqldrivers.libraries.oci FAILED
+looking for library odbc
+Trying source 0 (type inline) of library odbc ...
+  => source failed condition 'config.win32'.
+Trying source 1 (type inline) of library odbc ...
+sql.h not found in [] and global paths.
+sqlext.h not found in [] and global paths.
+  => source produced no result.
+Trying source 2 (type inline) of library odbc ...
+  => source failed condition '!config.win32 && !config.darwin'.
+test config.qtbase_sqldrivers.libraries.odbc FAILED
+looking for library psql
+Trying source 0 (type pkgConfig) of library psql ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type psqlConfig) of library psql ...
+pg_config not found.
+  => source produced no result.
+Trying source 2 (type psqlEnv) of library psql ...
+  => source failed condition 'config.win32'.
+Trying source 3 (type psqlEnv) of library psql ...
+libpq-fe.h not found in [] and global paths.
+  => source produced no result.
+test config.qtbase_sqldrivers.libraries.psql FAILED
+looking for library sqlite2
+Trying source 0 (type inline) of library sqlite2 ...
+None of [libsqlite.dylib libsqlite.tbd libsqlite.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_sqldrivers.libraries.sqlite2 FAILED
+looking for library tds
+Trying source 0 (type sybaseEnv) of library tds ...
+  => source failed condition 'config.win32'.
+Trying source 1 (type sybaseEnv) of library tds ...
+None of [libsybdb.dylib libsybdb.tbd libsybdb.a] found in [] and global paths.
+  => source produced no result.
+test config.qtbase_sqldrivers.libraries.tds FAILED
+executing config test d3d12
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/d3d12 && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtdeclarative/config.tests/d3d12
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/d3d12 && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtdeclarative/config.tests/d3d12 -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o d3d12.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtdeclarative/config.tests/d3d12/d3d12.cpp
+> /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtdeclarative/config.tests/d3d12/d3d12.cpp:40:10: fatal error: 'd3d12.h' file not found
+> #include <d3d12.h>
+>          ^~~~~~~~~
+> 1 error generated.
+> make: *** [d3d12.o] Error 1
+test config.qtdeclarative_quick.tests.d3d12 FAILED
+looking for library sdl2
+Trying source 0 (type pkgConfig) of library sdl2 ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library sdl2 ...
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/sdl && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += sdl2' 'QMAKE_LIBS_SDL2 = -F/Library/Frameworks/ -framework SDL2' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtgamepad/config.tests/sdl
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/sdl && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtgamepad/config.tests/sdl -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtgamepad/config.tests/sdl/main.cpp
+> /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtgamepad/config.tests/sdl/main.cpp:37:10: fatal error: 'SDL.h' file not found
+> #include <SDL.h>
+>          ^~~~~~~
+> 1 error generated.
+> make: *** [main.o] Error 1
+ => source failed verification.
+Trying source 2 (type inline) of library sdl2 ...
+  => source failed condition 'config.win32'.
+Trying source 3 (type inline) of library sdl2 ...
+  => source failed condition 'config.unix && !config.darwin'.
+test config.qtgamepad_gamepad.libraries.sdl2 FAILED
+looking for library assimp
+Trying source 0 (type pkgConfig) of library assimp ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library assimp ...
+None of [libassimp.dylib libassimp.tbd libassimp.a] found in [] and global paths.
+  => source produced no result.
+test config.qt3d_core.libraries.assimp FAILED
+looking for library fbx
+Trying source 0 (type fbx) of library fbx ...
+None of [libfbxsdk.dylib libfbxsdk.tbd libfbxsdk.a] found in [] and global paths.
+  => source produced no result.
+test config.qt3d_geometryloaders.libraries.fbx FAILED
+looking for library wayland-client
+Trying source 0 (type pkgConfig) of library wayland-client ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library wayland-client ...
+None of [libwayland-client.dylib libwayland-client.tbd libwayland-client.a] found in [] and global paths.
+  => source produced no result.
+test config.qtwayland_client.libraries.wayland-client FAILED
+looking for library wayland-egl
+Trying source 0 (type pkgConfig) of library wayland-egl ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library wayland-egl ...
+None of [libwayland-egl.dylib libwayland-egl.tbd libwayland-egl.a] found in [] and global paths.
+  => source produced no result.
+Trying source 2 (type inline) of library wayland-egl ...
+None of [libEGL.dylib libEGL.tbd libEGL.a] found in [] and global paths.
+  => source produced no result.
+test config.qtwayland_client.libraries.wayland-egl FAILED
+looking for library wayland-server
+Trying source 0 (type pkgConfig) of library wayland-server ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library wayland-server ...
+None of [libwayland-server.dylib libwayland-server.tbd libwayland-server.a] found in [] and global paths.
+  => source produced no result.
+test config.qtwayland_compositor.libraries.wayland-server FAILED
+looking for library bluez
+Trying source 0 (type pkgConfig) of library bluez ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library bluez ...
+None of [libbluetooth.dylib libbluetooth.tbd libbluetooth.a] found in [] and global paths.
+  => source produced no result.
+test config.qtconnectivity_bluetooth.libraries.bluez FAILED
+looking for library sensorfw
+Trying source 0 (type pkgConfig) of library sensorfw ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtsensors_sensors.libraries.sensorfw FAILED
+looking for library gypsy
+Trying source 0 (type pkgConfig) of library gypsy ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtlocation_positioning.libraries.gypsy FAILED
+executing config test winrt_geolocation
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/winrt && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtlocation/config.tests/winrt
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/winrt && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtlocation/config.tests/winrt -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtlocation/config.tests/winrt/main.cpp
+> /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtlocation/config.tests/winrt/main.cpp:30:10: fatal error: 'windows.system.h' file not found
+> #include <windows.system.h>
+>          ^~~~~~~~~~~~~~~~~~
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtlocation_positioning.tests.winrt_geolocation FAILED
+looking for library alsa
+Trying source 0 (type inline) of library alsa ...
+None of [libasound.dylib libasound.tbd libasound.a] found in [] and global paths.
+  => source produced no result.
+test config.qtmultimedia_multimedia.libraries.alsa FAILED
+looking for library avfoundation
+Trying source 0 (type inline) of library avfoundation ...
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/avfoundation && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += avfoundation' 'QMAKE_LIBS_AVFOUNDATION = -framework AVFoundation -framework Foundation' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtmultimedia/config.tests/avfoundation
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/avfoundation && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtmultimedia/config.tests/avfoundation -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtmultimedia/config.tests/avfoundation/main.mm
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o avfoundation main.o   -framework AVFoundation -framework Foundation   
+ => source accepted.
+test config.qtmultimedia_multimedia.libraries.avfoundation succeeded
+looking for library gstreamer_1_0
+Trying source 0 (type pkgConfig) of library gstreamer_1_0 ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtmultimedia_multimedia.libraries.gstreamer_1_0 FAILED
+looking for library gstreamer_0_10
+Trying source 0 (type pkgConfig) of library gstreamer_0_10 ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtmultimedia_multimedia.libraries.gstreamer_0_10 FAILED
+executing config test linux_v4l
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/linux_v4l && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtmultimedia/config.tests/linux_v4l
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/linux_v4l && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtmultimedia/config.tests/linux_v4l -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtmultimedia/config.tests/linux_v4l/main.cpp
+> /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtmultimedia/config.tests/linux_v4l/main.cpp:29:10: fatal error: 'linux/videodev2.h' file not found
+> #include <linux/videodev2.h>
+>          ^~~~~~~~~~~~~~~~~~~
+> 1 error generated.
+> make: *** [main.o] Error 1
+test config.qtmultimedia_multimedia.tests.linux_v4l FAILED
+looking for library openal
+Trying source 0 (type pkgConfig) of library openal ...
+pkg-config use disabled globally.
+  => source produced no result.
+Trying source 1 (type inline) of library openal ...
+  => source failed condition 'config.win32'.
+Trying source 2 (type inline) of library openal ...
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/openal && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" 'QMAKE_USE += openal' 'QMAKE_LIBS_OPENAL = -framework OpenAL' /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtmultimedia/config.tests/openal
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/openal && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC -DHEADER_OPENAL_PREFIX -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtmultimedia/config.tests/openal -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o main.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtmultimedia/config.tests/openal/main.cpp
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o openal main.o   -framework OpenAL   
+ => source accepted.
+test config.qtmultimedia_multimedia.libraries.openal succeeded
+looking for library pulseaudio
+Trying source 0 (type pkgConfig) of library pulseaudio ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtmultimedia_multimedia.libraries.pulseaudio FAILED
+looking for library libresourceqt5
+Trying source 0 (type pkgConfig) of library libresourceqt5 ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtmultimedia_multimedia.libraries.libresourceqt5 FAILED
+executing config test libclang
+test config.qttools_qdoc.tests.libclang FAILED
+executing config test webengine-alsa
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/alsa && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtwebengine/config.tests/alsa
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/alsa && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtwebengine/config.tests/alsa -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o alsatest.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtwebengine/config.tests/alsa/alsatest.cpp
+> /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtwebengine/config.tests/alsa/alsatest.cpp:29:10: fatal error: 'alsa/asoundlib.h' file not found
+> #include <alsa/asoundlib.h>
+>          ^~~~~~~~~~~~~~~~~~
+> 1 error generated.
+> make: *** [alsatest.o] Error 1
+test config.qtwebengine_core.tests.webengine-alsa FAILED
+executing config test webengine-bison
+Found bison from path: /usr/bin/bison
+test config.qtwebengine_core.tests.webengine-bison succeeded
+executing config test webengine-embedded-build
+test config.qtwebengine_core.tests.webengine-embedded-build FAILED
+executing config test webengine-flex
+Found flex from path: /usr/bin/flex
+test config.qtwebengine_core.tests.webengine-flex succeeded
+executing config test webengine-gperf
+Found gperf from path: /usr/bin/gperf
+test config.qtwebengine_core.tests.webengine-gperf succeeded
+executing config test webengine-host-pkg-config
+Found host pkg-config: /usr/local/bin/pkg-config
+test config.qtwebengine_core.tests.webengine-host-pkg-config gave result /usr/local/bin/pkg-config
+looking for library webengine-poppler-cpp
+Trying source 0 (type pkgConfig) of library webengine-poppler-cpp ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-poppler-cpp FAILED
+looking for library pulseaudio
+Trying source 0 (type pkgConfig) of library pulseaudio ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.pulseaudio FAILED
+executing config test webengine-python2
+'python2' not found in PATH. Checking for 'python'.
+test config.qtwebengine_core.tests.webengine-python2 gave result /usr/bin/python
+looking for library webengine-dbus
+Trying source 0 (type pkgConfig) of library webengine-dbus ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-dbus FAILED
+looking for library webengine-fontconfig
+Trying source 0 (type pkgConfig) of library webengine-fontconfig ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-fontconfig FAILED
+looking for library webengine-glib
+Trying source 0 (type pkgConfig) of library webengine-glib ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-glib FAILED
+looking for library webengine-jsoncpp
+Trying source 0 (type pkgConfig) of library webengine-jsoncpp ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-jsoncpp FAILED
+executing config test webengine-khr
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/khr && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtwebengine/config.tests/khr
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/khr && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o khr       
+> Undefined symbols for architecture x86_64:
+>   "_main", referenced from:
+>      implicit entry/start for main executable
+> ld: symbol(s) not found for architecture x86_64
+> clang: error: linker command failed with exit code 1 (use -v to see invocation)
+> make: *** [khr] Error 1
+test config.qtwebengine_core.tests.webengine-khr FAILED
+looking for library webengine-lcms2
+Trying source 0 (type pkgConfig) of library webengine-lcms2 ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-lcms2 FAILED
+looking for library webengine-libdrm
+Trying source 0 (type pkgConfig) of library webengine-libdrm ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-libdrm FAILED
+looking for library webengine-libevent
+Trying source 0 (type pkgConfig) of library webengine-libevent ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-libevent FAILED
+executing config test webengine-libvpx
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/libvpx && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtwebengine/config.tests/libvpx
+> Project ERROR: vpx development package not found
+test config.qtwebengine_core.tests.webengine-libvpx FAILED
+looking for library webengine-webp
+Trying source 0 (type pkgConfig) of library webengine-webp ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-webp FAILED
+looking for library webengine-libxml2
+Trying source 0 (type pkgConfig) of library webengine-libxml2 ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-libxml2 FAILED
+looking for library webengine-minizip
+Trying source 0 (type pkgConfig) of library webengine-minizip ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-minizip FAILED
+executing config test webengine-ninja
+Building own ninja
+test config.qtwebengine_core.tests.webengine-ninja FAILED
+looking for library webengine-opus
+Trying source 0 (type pkgConfig) of library webengine-opus ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-opus FAILED
+looking for library webengine-protobuf
+Trying source 0 (type pkgConfig) of library webengine-protobuf ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-protobuf FAILED
+executing config test webengine-re2
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/re2 && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtwebengine/config.tests/re2
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/re2 && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -c -pipe -stdlib=libc++ -g -std=gnu++11  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -w -fPIC  -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtwebengine/config.tests/re2 -I. -I/Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/mkspecs/macx-clang -o re2.o /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtwebengine/config.tests/re2/re2.cpp
+> /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtwebengine/config.tests/re2/re2.cpp:29:10: fatal error: 're2/re2.h' file not found
+> #include <re2/re2.h>
+>          ^~~~~~~~~~~
+> 1 error generated.
+> make: *** [re2.o] Error 1
+test config.qtwebengine_core.tests.webengine-re2 FAILED
+executing config test webengine-snappy
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/snappy && /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtbase/bin/qmake "CONFIG -= qt debug_and_release app_bundle lib_bundle" "CONFIG += shared warn_off console single_arch" /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/qtwebengine/config.tests/snappy
++ cd /Users/tuo/developOfIt/QtLearning/qt-everywhere-src-5.12.3/config.tests/snappy && MAKEFLAGS= /usr/bin/make
+> /Library/Developer/CommandLineTools/usr/bin/clang++ -stdlib=libc++ -headerpad_max_install_names  -arch x86_64 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -mmacosx-version-min=10.12 -Wl,-rpath,@executable_path/../Frameworks -o snappy    -lsnappy   
+> ld: library not found for -lsnappy
+> clang: error: linker command failed with exit code 1 (use -v to see invocation)
+> make: *** [snappy] Error 1
+test config.qtwebengine_core.tests.webengine-snappy FAILED
+looking for library webengine-x11
+Trying source 0 (type pkgConfig) of library webengine-x11 ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-x11 FAILED
+looking for library webengine-xcomposite
+Trying source 0 (type pkgConfig) of library webengine-xcomposite ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-xcomposite FAILED
+looking for library webengine-xcursor
+Trying source 0 (type pkgConfig) of library webengine-xcursor ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-xcursor FAILED
+looking for library webengine-xi
+Trying source 0 (type pkgConfig) of library webengine-xi ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-xi FAILED
+looking for library webengine-xtst
+Trying source 0 (type pkgConfig) of library webengine-xtst ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-xtst FAILED
+looking for library webengine-zlib
+Trying source 0 (type pkgConfig) of library webengine-zlib ...
+pkg-config use disabled globally.
+  => source produced no result.
+test config.qtwebengine_core.libraries.webengine-zlib FAILED

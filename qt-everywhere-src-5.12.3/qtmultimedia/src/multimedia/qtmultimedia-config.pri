@@ -1,0 +1,9 @@
+QT.multimedia.enabled_features = 
+QT.multimedia.disabled_features = 
+QT.multimedia.QT_CONFIG = avfoundation openal
+QT.multimedia.exports = 
+QT.multimedia_private.enabled_features = avfoundation openal
+QT.multimedia_private.disabled_features = alsa directshow directshow-player evr gpu_vivante gstreamer_1_0 gstreamer_0_10 gstreamer gstreamer_app gstreamer_encodingprofiles gstreamer_photography linux_v4l pulseaudio resourcepolicy wasapi wmf wmf-player wmsdk wshellitem
+QT.multimedia_private.libraries = avfoundation openal
+QMAKE_LIBS_AVFOUNDATION = -framework AVFoundation -framework Foundation
+QMAKE_LIBS_OPENAL = -framework OpenAL

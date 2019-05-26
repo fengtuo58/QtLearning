@@ -1,0 +1,9 @@
+QT.webenginecore.enabled_features = webengine-geolocation webengine-spellchecker webengine-webchannel
+QT.webenginecore.disabled_features = webengine-native-spellchecker
+QT.webenginecore.QT_CONFIG = 
+QT.webenginecore.exports = 
+QT.webenginecore_private.enabled_features = webengine-bison webengine-flex webengine-gperf webengine-host-pkg-config webengine-pepper-plugins webengine-printing-and-pdf webengine-python2 webengine-ui-delegates webengine-v8-snapshot webengine-v8-snapshot-support webengine-webrtc
+QT.webenginecore_private.disabled_features = webengine-alsa webengine-arm-thumb webengine-embedded-build webengine-kerberos webengine-poppler-cpp webengine-proprietary-codecs webengine-pulseaudio webengine-sanitizer webengine-system-dbus webengine-system-ffmpeg webengine-system-fontconfig webengine-system-freetype webengine-system-glib webengine-system-glibc webengine-system-gn webengine-system-harfbuzz webengine-system-icu webengine-system-jpeg webengine-system-jsoncpp webengine-system-khr webengine-system-lcms2 webengine-system-libdrm webengine-system-libevent webengine-system-libvpx webengine-system-libwebp webengine-system-libxml2 webengine-system-minizip webengine-system-ninja webengine-system-nss webengine-system-opus webengine-system-png webengine-system-protobuf webengine-system-re2 webengine-system-snappy webengine-system-x11 webengine-system-xcomposite webengine-system-xcursor webengine-system-xi webengine-system-xtst webengine-system-zlib webengine-testsupport webengine-win-compiler64 webengine-winversion
+QT.webenginecore_private.libraries = 
+QMAKE_PKG_CONFIG_HOST = /usr/local/bin/pkg-config
+QMAKE_PYTHON2 = /usr/bin/python

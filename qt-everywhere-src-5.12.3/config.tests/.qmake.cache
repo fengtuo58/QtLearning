@@ -1,0 +1,2 @@
+CONFIG += QTDIR_build
+QMAKE_TARGET_BUNDLE_PREFIX = Trailblazer
